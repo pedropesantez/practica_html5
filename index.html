@@ -4,105 +4,136 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Universo Musical - Instrumentos de Banda</title>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
 
-    <header>
-        <h1>Universo Musical: Los Instrumentos Esenciales del Rock</h1>
-        <p>Guía técnica y estructural sobre los instrumentos que dan vida a una banda musical.</p>
-    </header>
+    <div id="contenedor-principal">
+        <header id="cabecera-sitio">
+            <h1>Universo Musical: Los Instrumentos Esenciales del Rock</h1>
+            <p class="subtitulo-cabecera">Guía técnica y estructural sobre los instrumentos que dan vida a una banda musical.</p>
+        </header>
 
-    <nav>
-        <h2>Menú de Navegación</h2>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/bajo.html">El Bajo Eléctrico</a></li>
-            <li><a href="pages/guitarra.html">La Guitarra Eléctrica</a></li>
-            <li><a href="pages/bateria.html">La Batería</a></li>
-            <li><a href="pages/teclados.html">Teclados y Sintetizadores</a></li>
-        </ul>
-    </nav>
+        <div class="layout-columnas">
+            <nav id="menu-navegacion">
+                <h2>Navegación</h2>
+                <ul>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="pages/bajo.html">El Bajo Eléctrico</a></li>
+                    <li><a href="pages/guitarra.html">La Guitarra Eléctrica</a></li>
+                    <li><a href="pages/bateria.html">La Batería</a></li>
+                    <li><a href="pages/teclados.html">Teclados y Sintetizadores</a></li>
+                    <li><a href="pages/contacto.html">Contacto</a></li>
+                    <li><a href="pages/consultar_mensajes.php">Consultar Mensajes</a></li>
+                </ul>
+            </nav>
 
-    <hr>
+            <main id="contenido-principal">
+                <section class="bloque-seccion">
+                    <h2>Introducción a la Instrumentación Musical</h2>
+                    <p>
+                        La música moderna, y en especial géneros como el <strong>rock</strong> y el <em>glam rock</em>, dependen de la sinergia entre instrumentos de cuerda, percusión y síntesis electrónica. Cada instrumento ocupa un rango de frecuencias específico dentro del espectro auditivo.<br>
+                        Comprender la función de cada elemento permite componer arreglos limpios, líneas de bajo contundentes y secciones rítmicas sólidas.
+                    </p>
 
-    <main>
-        <section>
-            <h2>Introducción a la Instrumentación Musical</h2>
-            <p>
-                La música moderna, y en especial géneros como el <strong>rock</strong> y el <em>glam rock</em>, dependen de la sinergia entre instrumentos de cuerda, percusión y síntesis electrónica. Cada instrumento ocupa un rango de frecuencias específico dentro del espectro auditivo.<br>
-                Comprender la función de cada elemento permite componer arreglos limpios, líneas de bajo contundentes y secciones rítmicas sólidas.
-            </p>
+                    <figure class="figura-destacada">
+                        <a href="pages/bajo.html" class="enlace-imagen" title="Haz clic para ir a la sección del Bajo Eléctrico">
+                            <img src="images/banda-portada.png" alt="Escenario con instrumentos musicales de una banda de rock">
+                        </a>
+                        <figcaption>Figura 1: Configuración clásica de escenario. (Haz clic en la imagen para explorar el Bajo Eléctrico).</figcaption>
+                    </figure>
+                </section>
 
-            <figure>
-                <a href="pages/bajo.html" title="Haz clic para ir a la sección del Bajo Eléctrico">
-                    <img src="images/banda-portada.png" alt="Escenario con instrumentos musicales de una banda de rock" width="500">
-                </a>
-                <figcaption>Figura 1: Configuración clásica de escenario. (Haz clic en la imagen para explorar el Bajo Eléctrico).</figcaption>
-            </figure>
-        </section>
+                <section class="bloque-seccion">
+                    <h2>Galería de Instrumentos del Sitio</h2>
+                    <p>Explora las tarjetas resumen de los instrumentos que conforman la alineación principal:</p>
+                    <div class="galeria-tarjetas">
+                        <div class="tarjeta">
+                            <img src="images/bajo-electrico.jpg" alt="Bajo Eléctrico">
+                            <h3>Bajo Eléctrico</h3>
+                            <p>Base armónica y groove rítmico en frecuencias graves.</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="images/guitarra-electrica.jpg" alt="Guitarra Eléctrica">
+                            <h3>Guitarra Eléctrica</h3>
+                            <p>Riffs potentes, distorsión y solos melódicos.</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="images/bateria-acustica.jpg" alt="Batería Acústica">
+                            <h3>Batería Acústica</h3>
+                            <p>Motor de tempo, dinámica y percusión de la banda.</p>
+                        </div>
+                        <div class="tarjeta">
+                            <img src="images/sintetizador.jpg" alt="Sintetizador">
+                            <h3>Sintetizador</h3>
+                            <p>Atmósferas envolventes y diseño sonoro electrónico.</p>
+                        </div>
+                    </div>
+                </section>
 
-        <article>
-            <h3>Clasificación y Comparativa de Instrumentos</h3>
-            <p>A continuación, se presenta una tabla comparativa con las especificaciones principales de los instrumentos analizados en este sitio web:</p>
+                <article class="bloque-seccion">
+                    <h3>Clasificación y Comparativa de Instrumentos</h3>
+                    <p>A continuación, se presenta una tabla comparativa con las especificaciones principales de los instrumentos analizados:</p>
 
-            <table border="1">
-                <thead>
-                    <tr>
-                        <th>Instrumento</th>
-                        <th>Familia Acústica</th>
-                        <th>Rango de Frecuencia Principal</th>
-                        <th>Rol en la Banda</th>
-                        <th>Configuración Estándar</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>Bajo Eléctrico</strong></td>
-                        <td>Cordófono electrificado</td>
-                        <td>Graves (40 Hz - 400 Hz)</td>
-                        <td>Puente armónico y rítmico</td>
-                        <td>4 cuerdas (Mi, La, Re, Sol)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Guitarra Eléctrica</strong></td>
-                        <td>Cordófono electrificado</td>
-                        <td>Medios y Agudos (80 Hz - 1.2 kHz)</td>
-                        <td>Armonía (Riffs) y Melodía (Solos)</td>
-                        <td>6 cuerdas (Mi, La, Re, Sol, Si, Mi)</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Batería Acústica</strong></td>
-                        <td>Membranófono e Idiófono</td>
-                        <td>Espectro completo (Bombo a Platillos)</td>
-                        <td>Base rítmica y tempo</td>
-                        <td>Bombo, redoblante, toms, hi-hat y platos</td>
-                    </tr>
-                    <tr>
-                        <td><strong>Sintetizador / Teclado</strong></td>
-                        <td>Electrófono</td>
-                        <td>Rango completo (20 Hz - 20 kHz)</td>
-                        <td>Atmósfera, texturas y arreglos</td>
-                        <td>61 a 88 teclas sensibles a la velocidad</td>
-                    </tr>
-                </tbody>
-            </table>
-        </article>
+                    <table id="tabla-comparativa">
+                        <thead>
+                            <tr>
+                                <th>Instrumento</th>
+                                <th>Familia Acústica</th>
+                                <th>Rango de Frecuencia</th>
+                                <th>Rol en la Banda</th>
+                                <th>Configuración Estándar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Bajo Eléctrico</strong></td>
+                                <td>Cordófono electrificado</td>
+                                <td>Graves (40 Hz - 400 Hz)</td>
+                                <td>Puente armónico y rítmico</td>
+                                <td>4 cuerdas (Mi, La, Re, Sol)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Guitarra Eléctrica</strong></td>
+                                <td>Cordófono electrificado</td>
+                                <td>Medios y Agudos (80 Hz - 1.2 kHz)</td>
+                                <td>Armonía (Riffs) y Melodía (Solos)</td>
+                                <td>6 cuerdas (Mi, La, Re, Sol, Si, Mi)</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Batería Acústica</strong></td>
+                                <td>Membranófono e Idiófono</td>
+                                <td>Espectro completo</td>
+                                <td>Base rítmica y tempo</td>
+                                <td>Bombo, caja, toms y platillos</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sintetizador</strong></td>
+                                <td>Electrófono</td>
+                                <td>Rango completo (20 Hz - 20 kHz)</td>
+                                <td>Atmósfera, texturas y arreglos</td>
+                                <td>61 a 88 teclas sensibles</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
 
-        <aside>
-            <h3>Dato Curioso</h3>
-            <p>
-                El primer bajo eléctrico producido en serie y comercialmente exitoso fue el <em>Fender Precision Bass</em> en <strong>1951</strong>, diseñado por Leo Fender para permitir a los contrabajistas transportar su instrumento con facilidad y tener trastes para una afinación precisa.
-            </p>
-        </aside>
-    </main>
+                <aside class="nota-curiosa">
+                    <h3>Dato Curioso</h3>
+                    <p>
+                        El primer bajo eléctrico producido en serie y comercialmente exitoso fue el <em>Fender Precision Bass</em> en <strong>1951</strong>, diseñado por Leo Fender para permitir a los músicos transportar su instrumento con facilidad y contar con trastes para una afinación exacta.
+                    </p>
+                </aside>
+            </main>
+        </div>
 
-    <hr>
-
-    <footer>
-        <p>Desarrollado por: <strong>Pedro Xavier Pesántez Urgilés</strong></p>
-        <p>Contacto: <a href="mailto:ppesantezu@est.ups.edu.ec">ppesantezu@est.ups.edu.ec</a></p>
-        <p>&copy; 2026 Pedro Pesántez. Todos los derechos reservados.</p>
-    </footer>
+        <footer id="pie-pagina">
+            <p>Desarrollado por: <strong>Pedro Xavier Pesántez Urgilés</strong></p>
+            <p>Contacto: <a href="mailto:ppesantezu@est.ups.edu.ec">ppesantezu@est.ups.edu.ec</a></p>
+            <p>&copy; 2026 Pedro Pesántez. Todos los derechos reservados.</p>
+        </footer>
+    </div>
 
 </body>
 </html>
+

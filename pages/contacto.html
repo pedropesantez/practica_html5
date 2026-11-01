@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Universo Musical</title>
+    <link rel="stylesheet" href="../css/estilos.css">
+</head>
+<body>
+
+    <div id="contenedor-principal">
+        <header id="cabecera-sitio">
+            <h1>Contacto y Consultas Musicales</h1>
+            <p class="subtitulo-cabecera">Envíanos tus dudas sobre instrumentos, calibración o colaboraciones.</p>
+        </header>
+
+        <div class="layout-columnas">
+            <nav id="menu-navegacion">
+                <h2>Navegación</h2>
+                <ul>
+                    <li><a href="../index.html">Inicio</a></li>
+                    <li><a href="bajo.html">El Bajo Eléctrico</a></li>
+                    <li><a href="guitarra.html">La Guitarra Eléctrica</a></li>
+                    <li><a href="bateria.html">La Batería</a></li>
+                    <li><a href="teclados.html">Teclados y Sintetizadores</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="consultar_mensajes.php">Consultar Mensajes</a></li>
+                </ul>
+            </nav>
+
+            <main id="contenido-principal">
+                <section class="bloque-seccion">
+                    <h2>Formulario de Contacto</h2>
+                    <p>
+                        Completa todos los campos obligatorios. Tu mensaje será validado en el servidor y almacenado en nuestra base de datos MySQL.
+                    </p>
+
+                    <!-- NOTA PARA PRUEBAS P5, P6 y P7:
+                         Para desactivar temporalmente la validación del navegador y probar PHP,
+                         agrega el atributo novalidate en la etiqueta <form> así:
+                         <form id="formulario-contacto" action="procesar_contacto.php" method="POST" novalidate> -->
+                    <form id="formulario-contacto" action="procesar_contacto.php" method="POST">
+                        <fieldset>
+                            <legend>Datos del Mensaje</legend>
+
+                            <div class="campo-formulario">
+                                <label for="nombre_completo">Nombre completo (obligatorio, máx. 100 caracteres):</label>
+                                <input type="text" id="nombre_completo" name="nombre_completo" maxlength="100" required placeholder="Ej. Pedro Pesántez">
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="correo_electronico">Correo electrónico (obligatorio, máx. 150 caracteres):</label>
+                                <input type="email" id="correo_electronico" name="correo_electronico" maxlength="150" required placeholder="Ej. usuario@dominio.com">
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="asunto">Asunto (obligatorio, máx. 150 caracteres):</label>
+                                <input type="text" id="asunto" name="asunto" maxlength="150" required placeholder="Ej. Consulta sobre calibración de bajo eléctrico">
+                            </div>
+
+                            <div class="campo-formulario">
+                                <label for="mensaje">Mensaje (obligatorio, máx. 2000 caracteres):</label>
+                                <textarea id="mensaje" name="mensaje" rows="6" maxlength="2000" required placeholder="Escribe aquí tu mensaje detallado..."></textarea>
+                            </div>
+
+                            <button type="submit" class="boton-enviar">Enviar Mensaje</button>
+                        </fieldset>
+                    </form>
+                </section>
+            </main>
+        </div>
+
+        <footer id="pie-pagina">
+            <p>Desarrollado por: <strong>Pedro Xavier Pesántez Urgilés</strong></p>
+            <p>Contacto: <a href="mailto:ppesantezu@est.ups.edu.ec">ppesantezu@est.ups.edu.ec</a></p>
+            <p>&copy; 2026 Pedro Pesántez. Todos los derechos reservados.</p>
+        </footer>
+    </div>
+
+</body>
+</html>

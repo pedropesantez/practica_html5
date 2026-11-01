@@ -1,0 +1,387 @@
+/* 1. RESET BÁSICO Y HERENCIA GENERAL (Selector de etiqueta: body)*/
+* {
+    box-sizing: border-box;
+}
+
+body {
+    /* Herencia: se define tipografía y color general que heredarán los hijos */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #222222;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 20px;
+}
+
+/* 2. MODELO DE CAJA Y CONTENEDOR PRINCIPAL (Selector de ID único)*/
+#contenedor-principal {
+    max-width: 100%;
+    margin: 0 auto; /* Centrado automático lateral */
+    background-color: #ffffff;
+    border: 1px solid #d1d5db;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+#cabecera-sitio {
+    background-color: #111827;
+    color: #f9fafb;
+    padding: 24px;
+    margin-bottom: 20px;
+    border-bottom: 4px solid #dc2626;
+    border-radius: 4px;
+}
+
+/* 3. TIPOGRAFÍA Y AGRUPACIÓN DE SELECTORES*/
+h1, h2, h3 {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', sans-serif;
+    line-height: 1.3;
+    margin-top: 0;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+h2 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #991b1b;
+    border-bottom: 2px solid #e5e7eb;
+    padding-bottom: 6px;
+    margin-bottom: 14px;
+}
+
+h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #1f2937;
+    margin-top: 16px;
+    margin-bottom: 8px;
+}
+
+p {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #374151;
+    margin-bottom: 14px;
+}
+
+.subtitulo-cabecera {
+    color: #d1d5db;
+    font-size: 1.05rem;
+}
+
+/* 4. DISTRIBUCIÓN CON FLEXBOX (Dos columnas: Menú y Contenido Principal) */
+.layout-columnas {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 24px;
+}
+
+#menu-navegacion {
+    flex: 0 0 250px;
+    background-color: #f8fafc;
+    border: 1px solid #cbd5e1;
+    padding: 16px;
+    border-radius: 4px;
+}
+
+#contenido-principal {
+    flex: 1;
+    min-width: 0;
+}
+
+/* 5. NAVEGACIÓN (Selector descendiente, bloques, :hover y :active)*/
+#menu-navegacion ul {
+    list-style: none; /* Lista sin viñetas */
+    margin: 0;
+    padding: 0;
+}
+
+#menu-navegacion ul li {
+    margin-bottom: 8px;
+}
+
+#menu-navegacion ul li a {
+    display: block; /* Enlaces como bloques */
+    padding: 10px 14px;
+    background-color: #1f2937;
+    color: #ffffff;
+    text-decoration: none;
+    border: 1px solid #111827;
+    border-radius: 4px;
+    font-weight: 600;
+    transition: background-color 0.2s ease;
+}
+
+#menu-navegacion ul li a:hover {
+    background-color: #dc2626;
+    border-color: #991b1b;
+    color: #ffffff;
+}
+
+#menu-navegacion ul li a:active {
+    background-color: #7f1d1d;
+    transform: translateY(1px);
+}
+
+/* 6. COMPONENTES REUTILIZABLES Y HERENCIA SOBRESCRITA */
+.bloque-seccion {
+    background-color: #ffffff;
+    border: 1px solid #e5e7eb;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+    overflow-x: auto;
+}
+
+/* Sobrescritura de herencia: cambia font-family y color heredados de body */
+.nota-curiosa {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #1e3a8a;
+    background-color: #eff6ff;
+    border: 2px solid #93c5fd;
+    padding: 18px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.nota-curiosa p,
+.nota-curiosa h3 {
+    color: #1e3a8a; /* Sobrescribe el color de texto general */
+}
+
+/* 7. DISTRIBUCIÓN INTERIOR FLEXBOX (Conjunto de tarjetas con flex-wrap)*/
+.galeria-tarjetas {
+    display: flex;
+    flex-wrap: wrap; /* Distribuye en varias filas si falta espacio */
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.tarjeta {
+    flex: 1 1 200px;
+    background-color: #f9fafb;
+    border: 1px solid #d1d5db;
+    padding: 14px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.tarjeta img {
+    max-width: 100%;
+    height: 130px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+/* 8. IMÁGENES, MULTIMEDIA Y LISTAS PERSONALIZADAS*/
+.figura-destacada {
+    margin: 16px 0;
+    padding: 12px;
+    background-color: #f8fafc;
+    border: 1px solid #e2e8f0;
+    text-align: center;
+}
+
+.figura-destacada img {
+    max-width: 480px;
+    width: 100%;
+    height: auto; /* Conserva proporciones */
+    border: 2px solid #374151;
+    border-radius: 4px;
+}
+
+.enlace-imagen img:hover {
+    border-color: #dc2626;
+    opacity: 0.92;
+}
+
+figcaption {
+    font-size: 0.9rem;
+    color: #4b5563;
+    margin-top: 8px;
+    font-style: italic;
+}
+
+.contenedor-video iframe {
+    width: 100%;
+    max-width: 560px;
+    height: 315px;
+    border: 2px solid #1f2937;
+    border-radius: 4px;
+}
+
+/* Listas de contenido diferenciadas del menú mediante list-style-type */
+.lista-contenido-ul {
+    list-style-type: square;
+    padding-left: 24px;
+    margin-bottom: 16px;
+}
+
+.lista-contenido-ol {
+    list-style-type: decimal-leading-zero;
+    padding-left: 28px;
+    margin-bottom: 16px;
+}
+
+.lista-contenido-ul li,
+.lista-contenido-ol li {
+    margin-bottom: 8px;
+    color: #374151;
+}
+
+/* 9. TABLAS (border-collapse, bordes, relleno y encabezados distinguidos)*/
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    margin-bottom: 16px;
+}
+
+th, td {
+    border: 1px solid #9ca3af;
+    padding: 10px 12px;
+    text-align: left;
+    vertical-align: top;
+}
+
+thead th {
+    background-color: #1f2937;
+    color: #ffffff;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+}
+
+
+
+/* 10. FORMULARIO DE CONTACTO (display: block, fieldset, legend y :focus)*/
+#formulario-contacto fieldset {
+    border: 2px solid #9ca3af;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #f9fafb;
+}
+
+#formulario-contacto legend {
+    font-weight: 700;
+    color: #991b1b;
+    padding: 0 10px;
+    font-size: 1.1rem;
+}
+
+.campo-formulario {
+    margin-bottom: 16px;
+}
+
+#formulario-contacto label {
+    display: block; /* Etiquetas como bloque */
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #111827;
+}
+
+#formulario-contacto input[type="text"],
+#formulario-contacto input[type="email"],
+#formulario-contacto textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #6b7280;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+    background-color: #ffffff;
+}
+
+/* Resaltado del campo activo con :focus */
+#formulario-contacto input[type="text"]:focus,
+#formulario-contacto input[type="email"]:focus,
+#formulario-contacto textarea:focus {
+    outline: none;
+    border-color: #dc2626;
+    background-color: #fff5f5;
+    box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.2);
+}
+
+.boton-enviar {
+    background-color: #dc2626;
+    color: #ffffff;
+    border: 1px solid #991b1b;
+    padding: 12px 24px;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.boton-enviar:hover {
+    background-color: #991b1b;
+}
+
+/* Mensajes de estado PHP */
+.alerta-exito {
+    background-color: #dcfce7;
+    border: 2px solid #16a34a;
+    color: #14532d;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+.alerta-error {
+    background-color: #fee2e2;
+    border: 2px solid #dc2626;
+    color: #7f1d1d;
+    padding: 16px;
+    margin-bottom: 20px;
+    border-radius: 4px;
+}
+
+/* 11. PIE DE PÁGINA (Colocado después del contenido, sin cubrirlo)*/
+#pie-pagina {
+    background-color: #111827;
+    color: #e5e7eb;
+    text-align: center;
+    padding: 18px;
+    border-top: 4px solid #dc2626;
+    border-radius: 4px;
+}
+
+#pie-pagina p {
+    color: #e5e7eb;
+    margin: 6px 0;
+}
+
+#pie-pagina a {
+    color: #fca5a5;
+}
+
+/* Responsividad para cuando se reduce el ancho de la ventana (Prueba P2) */
+@media (max-width: 800px) {
+    .layout-columnas {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    #menu-navegacion,
+    #contenido-principal,
+    .bloque-seccion {
+        flex: 1 1 auto;
+        width: 100%;
+        max-width: 100%;
+    }
+    .bloque-seccion {
+        overflow-x: auto;
+    }
+}
